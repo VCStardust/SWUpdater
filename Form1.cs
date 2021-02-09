@@ -17,5 +17,9 @@ namespace SWUpdater
             InitializeComponent();
         }
 
+        private void dataGridViewP_CellContentClick(object sender, DataGridViewCellEventArgs e)
+        {
+
+        }
     }
 }
