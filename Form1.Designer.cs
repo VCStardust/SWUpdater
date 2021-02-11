@@ -31,19 +31,25 @@ namespace SWUpdater
         {
             this.PdataGridView = new System.Windows.Forms.DataGridView();
             this.statusStrip1 = new System.Windows.Forms.StatusStrip();
-            this.LogVtextBox1 = new System.Windows.Forms.TextBox();
+            this.LogtextBox1 = new System.Windows.Forms.TextBox();
+            this.Operate_groupBox1 = new System.Windows.Forms.GroupBox();
+            this.ExpLocal_button = new System.Windows.Forms.Button();
+            this.ExpRepo_button = new System.Windows.Forms.Button();
+            this.UpdareAll_button = new System.Windows.Forms.Button();
+            this.UpdateC_button = new System.Windows.Forms.Button();
             this.NameColumn = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.LVerColumn = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.RVerColumn = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.LPathColumn = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.URLColumn = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.OtherColumn = new System.Windows.Forms.DataGridViewTextBoxColumn();
-            this.Operate_groupBox1 = new System.Windows.Forms.GroupBox();
             ((System.ComponentModel.ISupportInitialize)(this.PdataGridView)).BeginInit();
+            this.Operate_groupBox1.SuspendLayout();
             this.SuspendLayout();
             // 
             // PdataGridView
             // 
+            this.PdataGridView.AllowUserToResizeRows = false;
             this.PdataGridView.BackgroundColor = System.Drawing.SystemColors.Window;
             this.PdataGridView.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize;
             this.PdataGridView.Columns.AddRange(new System.Windows.Forms.DataGridViewColumn[] {
@@ -58,9 +64,8 @@ namespace SWUpdater
             this.PdataGridView.Name = "PdataGridView";
             this.PdataGridView.RowHeadersVisible = false;
             this.PdataGridView.RowTemplate.Height = 25;
-            this.PdataGridView.Size = new System.Drawing.Size(1024, 684);
+            this.PdataGridView.Size = new System.Drawing.Size(1024, 692);
             this.PdataGridView.TabIndex = 1;
-            this.PdataGridView.CellContentClick += new System.Windows.Forms.DataGridViewCellEventHandler(this.dataGridViewP_CellContentClick);
             // 
             // statusStrip1
             // 
@@ -71,13 +76,62 @@ namespace SWUpdater
             this.statusStrip1.TabIndex = 2;
             this.statusStrip1.Text = "statusStrip1";
             // 
-            // LogVtextBox1
+            // LogtextBox1
             // 
-            this.LogVtextBox1.Location = new System.Drawing.Point(1042, 480);
-            this.LogVtextBox1.Multiline = true;
-            this.LogVtextBox1.Name = "LogVtextBox1";
-            this.LogVtextBox1.Size = new System.Drawing.Size(296, 216);
-            this.LogVtextBox1.TabIndex = 4;
+            this.LogtextBox1.Location = new System.Drawing.Point(1042, 480);
+            this.LogtextBox1.Multiline = true;
+            this.LogtextBox1.Name = "LogtextBox1";
+            this.LogtextBox1.Size = new System.Drawing.Size(296, 216);
+            this.LogtextBox1.TabIndex = 4;
+            // 
+            // Operate_groupBox1
+            // 
+            this.Operate_groupBox1.Controls.Add(this.ExpLocal_button);
+            this.Operate_groupBox1.Controls.Add(this.ExpRepo_button);
+            this.Operate_groupBox1.Controls.Add(this.UpdareAll_button);
+            this.Operate_groupBox1.Controls.Add(this.UpdateC_button);
+            this.Operate_groupBox1.Location = new System.Drawing.Point(1042, 12);
+            this.Operate_groupBox1.Name = "Operate_groupBox1";
+            this.Operate_groupBox1.Size = new System.Drawing.Size(296, 462);
+            this.Operate_groupBox1.TabIndex = 3;
+            this.Operate_groupBox1.TabStop = false;
+            this.Operate_groupBox1.Text = "信息";
+            // 
+            // ExpLocal_button
+            // 
+            this.ExpLocal_button.Location = new System.Drawing.Point(6, 428);
+            this.ExpLocal_button.Name = "ExpLocal_button";
+            this.ExpLocal_button.Size = new System.Drawing.Size(127, 28);
+            this.ExpLocal_button.TabIndex = 3;
+            this.ExpLocal_button.Text = "浏览程序目录";
+            this.ExpLocal_button.UseVisualStyleBackColor = true;
+            // 
+            // ExpRepo_button
+            // 
+            this.ExpRepo_button.Location = new System.Drawing.Point(6, 394);
+            this.ExpRepo_button.Name = "ExpRepo_button";
+            this.ExpRepo_button.Size = new System.Drawing.Size(127, 28);
+            this.ExpRepo_button.TabIndex = 2;
+            this.ExpRepo_button.Text = "访问Repo";
+            this.ExpRepo_button.UseVisualStyleBackColor = true;
+            // 
+            // UpdareAll_button
+            // 
+            this.UpdareAll_button.Location = new System.Drawing.Point(163, 360);
+            this.UpdareAll_button.Name = "UpdareAll_button";
+            this.UpdareAll_button.Size = new System.Drawing.Size(127, 28);
+            this.UpdareAll_button.TabIndex = 1;
+            this.UpdareAll_button.Text = "更新所有程序";
+            this.UpdareAll_button.UseVisualStyleBackColor = true;
+            // 
+            // UpdateC_button
+            // 
+            this.UpdateC_button.Location = new System.Drawing.Point(6, 360);
+            this.UpdateC_button.Name = "UpdateC_button";
+            this.UpdateC_button.Size = new System.Drawing.Size(127, 28);
+            this.UpdateC_button.TabIndex = 0;
+            this.UpdateC_button.Text = "更新当前程序";
+            this.UpdateC_button.UseVisualStyleBackColor = true;
             // 
             // NameColumn
             // 
@@ -96,6 +150,7 @@ namespace SWUpdater
             this.RVerColumn.AutoSizeMode = System.Windows.Forms.DataGridViewAutoSizeColumnMode.None;
             this.RVerColumn.HeaderText = "服务器版本";
             this.RVerColumn.Name = "RVerColumn";
+            this.RVerColumn.ReadOnly = true;
             this.RVerColumn.Width = 127;
             // 
             // LPathColumn
@@ -118,21 +173,12 @@ namespace SWUpdater
             this.OtherColumn.Name = "OtherColumn";
             this.OtherColumn.Width = 157;
             // 
-            // Operate_groupBox1
-            // 
-            this.Operate_groupBox1.Location = new System.Drawing.Point(1042, 12);
-            this.Operate_groupBox1.Name = "Operate_groupBox1";
-            this.Operate_groupBox1.Size = new System.Drawing.Size(296, 462);
-            this.Operate_groupBox1.TabIndex = 3;
-            this.Operate_groupBox1.TabStop = false;
-            this.Operate_groupBox1.Text = "信息";
-            // 
             // Form1
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(7F, 17F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.ClientSize = new System.Drawing.Size(1350, 729);
-            this.Controls.Add(this.LogVtextBox1);
+            this.Controls.Add(this.LogtextBox1);
             this.Controls.Add(this.Operate_groupBox1);
             this.Controls.Add(this.statusStrip1);
             this.Controls.Add(this.PdataGridView);
@@ -143,6 +189,7 @@ namespace SWUpdater
             this.SizeGripStyle = System.Windows.Forms.SizeGripStyle.Show;
             this.Text = "Updater";
             ((System.ComponentModel.ISupportInitialize)(this.PdataGridView)).EndInit();
+            this.Operate_groupBox1.ResumeLayout(false);
             this.ResumeLayout(false);
             this.PerformLayout();
 
@@ -151,14 +198,18 @@ namespace SWUpdater
         #endregion
         private System.Windows.Forms.DataGridView PdataGridView;
         private System.Windows.Forms.StatusStrip statusStrip1;
+        private System.Windows.Forms.TextBox LogtextBox1;
+        private System.Windows.Forms.GroupBox Operate_groupBox1;
+        private System.Windows.Forms.Button UpdareAll_button;
+        private System.Windows.Forms.Button UpdateC_button;
+        private System.Windows.Forms.Button ExpLocal_button;
+        private System.Windows.Forms.Button ExpRepo_button;
         private System.Windows.Forms.DataGridViewTextBoxColumn NameColumn;
         private System.Windows.Forms.DataGridViewTextBoxColumn LVerColumn;
         private System.Windows.Forms.DataGridViewTextBoxColumn RVerColumn;
         private System.Windows.Forms.DataGridViewTextBoxColumn LPathColumn;
         private System.Windows.Forms.DataGridViewTextBoxColumn URLColumn;
         private System.Windows.Forms.DataGridViewTextBoxColumn OtherColumn;
-        private System.Windows.Forms.TextBox LogVtextBox1;
-        private System.Windows.Forms.GroupBox Operate_groupBox1;
     }
 }
 
