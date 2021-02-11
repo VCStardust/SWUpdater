@@ -30,6 +30,12 @@ namespace SWUpdater
         private void InitializeComponent()
         {
             this.PdataGridView = new System.Windows.Forms.DataGridView();
+            this.NameColumn = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.LVerColumn = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.RVerColumn = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.LPathColumn = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.URLColumn = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.OtherColumn = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.statusStrip1 = new System.Windows.Forms.StatusStrip();
             this.LogtextBox1 = new System.Windows.Forms.TextBox();
             this.Operate_groupBox1 = new System.Windows.Forms.GroupBox();
@@ -37,12 +43,6 @@ namespace SWUpdater
             this.ExpRepo_button = new System.Windows.Forms.Button();
             this.UpdareAll_button = new System.Windows.Forms.Button();
             this.UpdateC_button = new System.Windows.Forms.Button();
-            this.NameColumn = new System.Windows.Forms.DataGridViewTextBoxColumn();
-            this.LVerColumn = new System.Windows.Forms.DataGridViewTextBoxColumn();
-            this.RVerColumn = new System.Windows.Forms.DataGridViewTextBoxColumn();
-            this.LPathColumn = new System.Windows.Forms.DataGridViewTextBoxColumn();
-            this.URLColumn = new System.Windows.Forms.DataGridViewTextBoxColumn();
-            this.OtherColumn = new System.Windows.Forms.DataGridViewTextBoxColumn();
             ((System.ComponentModel.ISupportInitialize)(this.PdataGridView)).BeginInit();
             this.Operate_groupBox1.SuspendLayout();
             this.SuspendLayout();
@@ -64,8 +64,48 @@ namespace SWUpdater
             this.PdataGridView.Name = "PdataGridView";
             this.PdataGridView.RowHeadersVisible = false;
             this.PdataGridView.RowTemplate.Height = 25;
-            this.PdataGridView.Size = new System.Drawing.Size(1024, 692);
+            this.PdataGridView.Size = new System.Drawing.Size(1024, 684);
             this.PdataGridView.TabIndex = 1;
+            // 
+            // NameColumn
+            // 
+            this.NameColumn.HeaderText = "程序名";
+            this.NameColumn.Name = "NameColumn";
+            this.NameColumn.Width = 160;
+            // 
+            // LVerColumn
+            // 
+            this.LVerColumn.HeaderText = "本地版本";
+            this.LVerColumn.Name = "LVerColumn";
+            this.LVerColumn.Width = 127;
+            // 
+            // RVerColumn
+            // 
+            this.RVerColumn.AutoSizeMode = System.Windows.Forms.DataGridViewAutoSizeColumnMode.None;
+            this.RVerColumn.HeaderText = "服务器版本";
+            this.RVerColumn.Name = "RVerColumn";
+            this.RVerColumn.ReadOnly = true;
+            this.RVerColumn.Width = 127;
+            // 
+            // LPathColumn
+            // 
+            this.LPathColumn.HeaderText = "路径";
+            this.LPathColumn.Name = "LPathColumn";
+            this.LPathColumn.Width = 225;
+            // 
+            // URLColumn
+            // 
+            this.URLColumn.AutoSizeMode = System.Windows.Forms.DataGridViewAutoSizeColumnMode.None;
+            this.URLColumn.HeaderText = "Repo地址";
+            this.URLColumn.Name = "URLColumn";
+            this.URLColumn.Width = 225;
+            // 
+            // OtherColumn
+            // 
+            this.OtherColumn.AutoSizeMode = System.Windows.Forms.DataGridViewAutoSizeColumnMode.None;
+            this.OtherColumn.HeaderText = "其他属性";
+            this.OtherColumn.Name = "OtherColumn";
+            this.OtherColumn.Width = 157;
             // 
             // statusStrip1
             // 
@@ -132,46 +172,6 @@ namespace SWUpdater
             this.UpdateC_button.TabIndex = 0;
             this.UpdateC_button.Text = "更新当前程序";
             this.UpdateC_button.UseVisualStyleBackColor = true;
-            // 
-            // NameColumn
-            // 
-            this.NameColumn.HeaderText = "程序名";
-            this.NameColumn.Name = "NameColumn";
-            this.NameColumn.Width = 160;
-            // 
-            // LVerColumn
-            // 
-            this.LVerColumn.HeaderText = "本地版本";
-            this.LVerColumn.Name = "LVerColumn";
-            this.LVerColumn.Width = 127;
-            // 
-            // RVerColumn
-            // 
-            this.RVerColumn.AutoSizeMode = System.Windows.Forms.DataGridViewAutoSizeColumnMode.None;
-            this.RVerColumn.HeaderText = "服务器版本";
-            this.RVerColumn.Name = "RVerColumn";
-            this.RVerColumn.ReadOnly = true;
-            this.RVerColumn.Width = 127;
-            // 
-            // LPathColumn
-            // 
-            this.LPathColumn.HeaderText = "路径";
-            this.LPathColumn.Name = "LPathColumn";
-            this.LPathColumn.Width = 225;
-            // 
-            // URLColumn
-            // 
-            this.URLColumn.AutoSizeMode = System.Windows.Forms.DataGridViewAutoSizeColumnMode.None;
-            this.URLColumn.HeaderText = "Repo地址";
-            this.URLColumn.Name = "URLColumn";
-            this.URLColumn.Width = 225;
-            // 
-            // OtherColumn
-            // 
-            this.OtherColumn.AutoSizeMode = System.Windows.Forms.DataGridViewAutoSizeColumnMode.None;
-            this.OtherColumn.HeaderText = "其他属性";
-            this.OtherColumn.Name = "OtherColumn";
-            this.OtherColumn.Width = 157;
             // 
             // Form1
             // 
