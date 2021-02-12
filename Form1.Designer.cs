@@ -37,14 +37,19 @@ namespace SWUpdater
             this.URLColumn = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.OtherColumn = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.statusStrip1 = new System.Windows.Forms.StatusStrip();
-            this.LogtextBox1 = new System.Windows.Forms.TextBox();
-            this.Operate_groupBox1 = new System.Windows.Forms.GroupBox();
+            this.LogtextBox = new System.Windows.Forms.TextBox();
+            this.Operate_groupBox = new System.Windows.Forms.GroupBox();
             this.ExpLocal_button = new System.Windows.Forms.Button();
             this.ExpRepo_button = new System.Windows.Forms.Button();
-            this.UpdareAll_button = new System.Windows.Forms.Button();
+            this.UpdateAll_button = new System.Windows.Forms.Button();
             this.UpdateC_button = new System.Windows.Forms.Button();
+            this.label1 = new System.Windows.Forms.Label();
+            this.VerSelect_comboBox = new System.Windows.Forms.ComboBox();
+            this.AppName_label = new System.Windows.Forms.Label();
+            this.LocalVer_label = new System.Windows.Forms.Label();
+            this.UpdateTime_label = new System.Windows.Forms.Label();
             ((System.ComponentModel.ISupportInitialize)(this.PdataGridView)).BeginInit();
-            this.Operate_groupBox1.SuspendLayout();
+            this.Operate_groupBox.SuspendLayout();
             this.SuspendLayout();
             // 
             // PdataGridView
@@ -116,26 +121,31 @@ namespace SWUpdater
             this.statusStrip1.TabIndex = 2;
             this.statusStrip1.Text = "statusStrip1";
             // 
-            // LogtextBox1
+            // LogtextBox
             // 
-            this.LogtextBox1.Location = new System.Drawing.Point(1042, 480);
-            this.LogtextBox1.Multiline = true;
-            this.LogtextBox1.Name = "LogtextBox1";
-            this.LogtextBox1.Size = new System.Drawing.Size(296, 216);
-            this.LogtextBox1.TabIndex = 4;
+            this.LogtextBox.Location = new System.Drawing.Point(1042, 480);
+            this.LogtextBox.Multiline = true;
+            this.LogtextBox.Name = "LogtextBox";
+            this.LogtextBox.Size = new System.Drawing.Size(296, 216);
+            this.LogtextBox.TabIndex = 4;
             // 
-            // Operate_groupBox1
+            // Operate_groupBox
             // 
-            this.Operate_groupBox1.Controls.Add(this.ExpLocal_button);
-            this.Operate_groupBox1.Controls.Add(this.ExpRepo_button);
-            this.Operate_groupBox1.Controls.Add(this.UpdareAll_button);
-            this.Operate_groupBox1.Controls.Add(this.UpdateC_button);
-            this.Operate_groupBox1.Location = new System.Drawing.Point(1042, 12);
-            this.Operate_groupBox1.Name = "Operate_groupBox1";
-            this.Operate_groupBox1.Size = new System.Drawing.Size(296, 462);
-            this.Operate_groupBox1.TabIndex = 3;
-            this.Operate_groupBox1.TabStop = false;
-            this.Operate_groupBox1.Text = "信息";
+            this.Operate_groupBox.Controls.Add(this.UpdateTime_label);
+            this.Operate_groupBox.Controls.Add(this.LocalVer_label);
+            this.Operate_groupBox.Controls.Add(this.AppName_label);
+            this.Operate_groupBox.Controls.Add(this.VerSelect_comboBox);
+            this.Operate_groupBox.Controls.Add(this.label1);
+            this.Operate_groupBox.Controls.Add(this.ExpLocal_button);
+            this.Operate_groupBox.Controls.Add(this.ExpRepo_button);
+            this.Operate_groupBox.Controls.Add(this.UpdateAll_button);
+            this.Operate_groupBox.Controls.Add(this.UpdateC_button);
+            this.Operate_groupBox.Location = new System.Drawing.Point(1042, 12);
+            this.Operate_groupBox.Name = "Operate_groupBox";
+            this.Operate_groupBox.Size = new System.Drawing.Size(296, 462);
+            this.Operate_groupBox.TabIndex = 3;
+            this.Operate_groupBox.TabStop = false;
+            this.Operate_groupBox.Text = "信息";
             // 
             // ExpLocal_button
             // 
@@ -155,14 +165,14 @@ namespace SWUpdater
             this.ExpRepo_button.Text = "访问Repo";
             this.ExpRepo_button.UseVisualStyleBackColor = true;
             // 
-            // UpdareAll_button
+            // UpdateAll_button
             // 
-            this.UpdareAll_button.Location = new System.Drawing.Point(163, 360);
-            this.UpdareAll_button.Name = "UpdareAll_button";
-            this.UpdareAll_button.Size = new System.Drawing.Size(127, 28);
-            this.UpdareAll_button.TabIndex = 1;
-            this.UpdareAll_button.Text = "更新所有程序";
-            this.UpdareAll_button.UseVisualStyleBackColor = true;
+            this.UpdateAll_button.Location = new System.Drawing.Point(163, 360);
+            this.UpdateAll_button.Name = "UpdateAll_button";
+            this.UpdateAll_button.Size = new System.Drawing.Size(127, 28);
+            this.UpdateAll_button.TabIndex = 1;
+            this.UpdateAll_button.Text = "更新所有程序";
+            this.UpdateAll_button.UseVisualStyleBackColor = true;
             // 
             // UpdateC_button
             // 
@@ -173,13 +183,57 @@ namespace SWUpdater
             this.UpdateC_button.Text = "更新当前程序";
             this.UpdateC_button.UseVisualStyleBackColor = true;
             // 
+            // label1
+            // 
+            this.label1.AutoSize = true;
+            this.label1.Location = new System.Drawing.Point(6, 249);
+            this.label1.Name = "label1";
+            this.label1.Size = new System.Drawing.Size(44, 17);
+            this.label1.TabIndex = 4;
+            this.label1.Text = "更新至";
+            // 
+            // VerSelect_comboBox
+            // 
+            this.VerSelect_comboBox.FormattingEnabled = true;
+            this.VerSelect_comboBox.Location = new System.Drawing.Point(56, 246);
+            this.VerSelect_comboBox.Name = "VerSelect_comboBox";
+            this.VerSelect_comboBox.Size = new System.Drawing.Size(121, 25);
+            this.VerSelect_comboBox.TabIndex = 5;
+            // 
+            // AppName_label
+            // 
+            this.AppName_label.AutoSize = true;
+            this.AppName_label.Location = new System.Drawing.Point(43, 32);
+            this.AppName_label.Name = "AppName_label";
+            this.AppName_label.Size = new System.Drawing.Size(56, 17);
+            this.AppName_label.TabIndex = 6;
+            this.AppName_label.Text = "程序名：";
+            // 
+            // LocalVer_label
+            // 
+            this.LocalVer_label.AutoSize = true;
+            this.LocalVer_label.Location = new System.Drawing.Point(7, 49);
+            this.LocalVer_label.Name = "LocalVer_label";
+            this.LocalVer_label.Size = new System.Drawing.Size(92, 17);
+            this.LocalVer_label.TabIndex = 7;
+            this.LocalVer_label.Text = "当前本地版本：";
+            // 
+            // UpdateTime_label
+            // 
+            this.UpdateTime_label.AutoSize = true;
+            this.UpdateTime_label.Location = new System.Drawing.Point(31, 66);
+            this.UpdateTime_label.Name = "UpdateTime_label";
+            this.UpdateTime_label.Size = new System.Drawing.Size(68, 17);
+            this.UpdateTime_label.TabIndex = 8;
+            this.UpdateTime_label.Text = "更新日期：";
+            // 
             // Form1
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(7F, 17F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.ClientSize = new System.Drawing.Size(1350, 729);
-            this.Controls.Add(this.LogtextBox1);
-            this.Controls.Add(this.Operate_groupBox1);
+            this.Controls.Add(this.LogtextBox);
+            this.Controls.Add(this.Operate_groupBox);
             this.Controls.Add(this.statusStrip1);
             this.Controls.Add(this.PdataGridView);
             this.DoubleBuffered = true;
@@ -189,7 +243,8 @@ namespace SWUpdater
             this.SizeGripStyle = System.Windows.Forms.SizeGripStyle.Show;
             this.Text = "Updater";
             ((System.ComponentModel.ISupportInitialize)(this.PdataGridView)).EndInit();
-            this.Operate_groupBox1.ResumeLayout(false);
+            this.Operate_groupBox.ResumeLayout(false);
+            this.Operate_groupBox.PerformLayout();
             this.ResumeLayout(false);
             this.PerformLayout();
 
@@ -198,9 +253,9 @@ namespace SWUpdater
         #endregion
         private System.Windows.Forms.DataGridView PdataGridView;
         private System.Windows.Forms.StatusStrip statusStrip1;
-        private System.Windows.Forms.TextBox LogtextBox1;
-        private System.Windows.Forms.GroupBox Operate_groupBox1;
-        private System.Windows.Forms.Button UpdareAll_button;
+        private System.Windows.Forms.TextBox LogtextBox;
+        private System.Windows.Forms.GroupBox Operate_groupBox;
+        private System.Windows.Forms.Button UpdateAll_button;
         private System.Windows.Forms.Button UpdateC_button;
         private System.Windows.Forms.Button ExpLocal_button;
         private System.Windows.Forms.Button ExpRepo_button;
@@ -210,6 +265,11 @@ namespace SWUpdater
         private System.Windows.Forms.DataGridViewTextBoxColumn LPathColumn;
         private System.Windows.Forms.DataGridViewTextBoxColumn URLColumn;
         private System.Windows.Forms.DataGridViewTextBoxColumn OtherColumn;
+        private System.Windows.Forms.ComboBox VerSelect_comboBox;
+        private System.Windows.Forms.Label label1;
+        private System.Windows.Forms.Label UpdateTime_label;
+        private System.Windows.Forms.Label LocalVer_label;
+        private System.Windows.Forms.Label AppName_label;
     }
 }
 
