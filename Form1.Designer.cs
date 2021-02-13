@@ -39,15 +39,16 @@ namespace SWUpdater
             this.statusStrip1 = new System.Windows.Forms.StatusStrip();
             this.LogtextBox = new System.Windows.Forms.TextBox();
             this.Operate_groupBox = new System.Windows.Forms.GroupBox();
+            this.UpdateTime_label = new System.Windows.Forms.Label();
+            this.LocalVer_label = new System.Windows.Forms.Label();
+            this.AppName_label = new System.Windows.Forms.Label();
+            this.VerSelect_comboBox = new System.Windows.Forms.ComboBox();
+            this.VerSelect_label = new System.Windows.Forms.Label();
             this.ExpLocal_button = new System.Windows.Forms.Button();
             this.ExpRepo_button = new System.Windows.Forms.Button();
             this.UpdateAll_button = new System.Windows.Forms.Button();
             this.UpdateC_button = new System.Windows.Forms.Button();
-            this.label1 = new System.Windows.Forms.Label();
-            this.VerSelect_comboBox = new System.Windows.Forms.ComboBox();
-            this.AppName_label = new System.Windows.Forms.Label();
-            this.LocalVer_label = new System.Windows.Forms.Label();
-            this.UpdateTime_label = new System.Windows.Forms.Label();
+            this.InstallPath_label = new System.Windows.Forms.Label();
             ((System.ComponentModel.ISupportInitialize)(this.PdataGridView)).BeginInit();
             this.Operate_groupBox.SuspendLayout();
             this.SuspendLayout();
@@ -131,11 +132,12 @@ namespace SWUpdater
             // 
             // Operate_groupBox
             // 
+            this.Operate_groupBox.Controls.Add(this.InstallPath_label);
             this.Operate_groupBox.Controls.Add(this.UpdateTime_label);
             this.Operate_groupBox.Controls.Add(this.LocalVer_label);
             this.Operate_groupBox.Controls.Add(this.AppName_label);
             this.Operate_groupBox.Controls.Add(this.VerSelect_comboBox);
-            this.Operate_groupBox.Controls.Add(this.label1);
+            this.Operate_groupBox.Controls.Add(this.VerSelect_label);
             this.Operate_groupBox.Controls.Add(this.ExpLocal_button);
             this.Operate_groupBox.Controls.Add(this.ExpRepo_button);
             this.Operate_groupBox.Controls.Add(this.UpdateAll_button);
@@ -146,6 +148,50 @@ namespace SWUpdater
             this.Operate_groupBox.TabIndex = 3;
             this.Operate_groupBox.TabStop = false;
             this.Operate_groupBox.Text = "信息";
+            // 
+            // UpdateTime_label
+            // 
+            this.UpdateTime_label.AutoSize = true;
+            this.UpdateTime_label.Location = new System.Drawing.Point(6, 83);
+            this.UpdateTime_label.Name = "UpdateTime_label";
+            this.UpdateTime_label.Size = new System.Drawing.Size(68, 17);
+            this.UpdateTime_label.TabIndex = 8;
+            this.UpdateTime_label.Text = "更新日期：";
+            // 
+            // LocalVer_label
+            // 
+            this.LocalVer_label.AutoSize = true;
+            this.LocalVer_label.Location = new System.Drawing.Point(6, 49);
+            this.LocalVer_label.Name = "LocalVer_label";
+            this.LocalVer_label.Size = new System.Drawing.Size(68, 17);
+            this.LocalVer_label.TabIndex = 7;
+            this.LocalVer_label.Text = "本地版本：";
+            // 
+            // AppName_label
+            // 
+            this.AppName_label.AutoSize = true;
+            this.AppName_label.Location = new System.Drawing.Point(18, 32);
+            this.AppName_label.Name = "AppName_label";
+            this.AppName_label.Size = new System.Drawing.Size(56, 17);
+            this.AppName_label.TabIndex = 6;
+            this.AppName_label.Text = "程序名：";
+            // 
+            // VerSelect_comboBox
+            // 
+            this.VerSelect_comboBox.FormattingEnabled = true;
+            this.VerSelect_comboBox.Location = new System.Drawing.Point(68, 246);
+            this.VerSelect_comboBox.Name = "VerSelect_comboBox";
+            this.VerSelect_comboBox.Size = new System.Drawing.Size(121, 25);
+            this.VerSelect_comboBox.TabIndex = 5;
+            // 
+            // VerSelect_label
+            // 
+            this.VerSelect_label.AutoSize = true;
+            this.VerSelect_label.Location = new System.Drawing.Point(6, 249);
+            this.VerSelect_label.Name = "VerSelect_label";
+            this.VerSelect_label.Size = new System.Drawing.Size(56, 17);
+            this.VerSelect_label.TabIndex = 4;
+            this.VerSelect_label.Text = "更新至：";
             // 
             // ExpLocal_button
             // 
@@ -183,49 +229,14 @@ namespace SWUpdater
             this.UpdateC_button.Text = "更新当前程序";
             this.UpdateC_button.UseVisualStyleBackColor = true;
             // 
-            // label1
+            // InstallPath_label
             // 
-            this.label1.AutoSize = true;
-            this.label1.Location = new System.Drawing.Point(6, 249);
-            this.label1.Name = "label1";
-            this.label1.Size = new System.Drawing.Size(44, 17);
-            this.label1.TabIndex = 4;
-            this.label1.Text = "更新至";
-            // 
-            // VerSelect_comboBox
-            // 
-            this.VerSelect_comboBox.FormattingEnabled = true;
-            this.VerSelect_comboBox.Location = new System.Drawing.Point(56, 246);
-            this.VerSelect_comboBox.Name = "VerSelect_comboBox";
-            this.VerSelect_comboBox.Size = new System.Drawing.Size(121, 25);
-            this.VerSelect_comboBox.TabIndex = 5;
-            // 
-            // AppName_label
-            // 
-            this.AppName_label.AutoSize = true;
-            this.AppName_label.Location = new System.Drawing.Point(43, 32);
-            this.AppName_label.Name = "AppName_label";
-            this.AppName_label.Size = new System.Drawing.Size(56, 17);
-            this.AppName_label.TabIndex = 6;
-            this.AppName_label.Text = "程序名：";
-            // 
-            // LocalVer_label
-            // 
-            this.LocalVer_label.AutoSize = true;
-            this.LocalVer_label.Location = new System.Drawing.Point(7, 49);
-            this.LocalVer_label.Name = "LocalVer_label";
-            this.LocalVer_label.Size = new System.Drawing.Size(92, 17);
-            this.LocalVer_label.TabIndex = 7;
-            this.LocalVer_label.Text = "当前本地版本：";
-            // 
-            // UpdateTime_label
-            // 
-            this.UpdateTime_label.AutoSize = true;
-            this.UpdateTime_label.Location = new System.Drawing.Point(31, 66);
-            this.UpdateTime_label.Name = "UpdateTime_label";
-            this.UpdateTime_label.Size = new System.Drawing.Size(68, 17);
-            this.UpdateTime_label.TabIndex = 8;
-            this.UpdateTime_label.Text = "更新日期：";
+            this.InstallPath_label.AutoSize = true;
+            this.InstallPath_label.Location = new System.Drawing.Point(6, 66);
+            this.InstallPath_label.Name = "InstallPath_label";
+            this.InstallPath_label.Size = new System.Drawing.Size(68, 17);
+            this.InstallPath_label.TabIndex = 9;
+            this.InstallPath_label.Text = "安装路径：";
             // 
             // Form1
             // 
@@ -266,10 +277,11 @@ namespace SWUpdater
         private System.Windows.Forms.DataGridViewTextBoxColumn URLColumn;
         private System.Windows.Forms.DataGridViewTextBoxColumn OtherColumn;
         private System.Windows.Forms.ComboBox VerSelect_comboBox;
-        private System.Windows.Forms.Label label1;
+        private System.Windows.Forms.Label VerSelect_label;
         private System.Windows.Forms.Label UpdateTime_label;
         private System.Windows.Forms.Label LocalVer_label;
         private System.Windows.Forms.Label AppName_label;
+        private System.Windows.Forms.Label InstallPath_label;
     }
 }
 
