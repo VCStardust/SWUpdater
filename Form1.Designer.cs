@@ -39,6 +39,7 @@ namespace SWUpdater
             this.statusStrip1 = new System.Windows.Forms.StatusStrip();
             this.LogtextBox = new System.Windows.Forms.TextBox();
             this.Operate_groupBox = new System.Windows.Forms.GroupBox();
+            this.InstallPath_label = new System.Windows.Forms.Label();
             this.UpdateTime_label = new System.Windows.Forms.Label();
             this.LocalVer_label = new System.Windows.Forms.Label();
             this.AppName_label = new System.Windows.Forms.Label();
@@ -48,7 +49,6 @@ namespace SWUpdater
             this.ExpRepo_button = new System.Windows.Forms.Button();
             this.UpdateAll_button = new System.Windows.Forms.Button();
             this.UpdateC_button = new System.Windows.Forms.Button();
-            this.InstallPath_label = new System.Windows.Forms.Label();
             ((System.ComponentModel.ISupportInitialize)(this.PdataGridView)).BeginInit();
             this.Operate_groupBox.SuspendLayout();
             this.SuspendLayout();
@@ -140,14 +140,22 @@ namespace SWUpdater
             this.Operate_groupBox.Controls.Add(this.VerSelect_label);
             this.Operate_groupBox.Controls.Add(this.ExpLocal_button);
             this.Operate_groupBox.Controls.Add(this.ExpRepo_button);
-            this.Operate_groupBox.Controls.Add(this.UpdateAll_button);
             this.Operate_groupBox.Controls.Add(this.UpdateC_button);
             this.Operate_groupBox.Location = new System.Drawing.Point(1042, 12);
             this.Operate_groupBox.Name = "Operate_groupBox";
-            this.Operate_groupBox.Size = new System.Drawing.Size(296, 462);
+            this.Operate_groupBox.Size = new System.Drawing.Size(296, 428);
             this.Operate_groupBox.TabIndex = 3;
             this.Operate_groupBox.TabStop = false;
             this.Operate_groupBox.Text = "信息";
+            // 
+            // InstallPath_label
+            // 
+            this.InstallPath_label.AutoSize = true;
+            this.InstallPath_label.Location = new System.Drawing.Point(6, 66);
+            this.InstallPath_label.Name = "InstallPath_label";
+            this.InstallPath_label.Size = new System.Drawing.Size(68, 17);
+            this.InstallPath_label.TabIndex = 9;
+            this.InstallPath_label.Text = "安装路径：";
             // 
             // UpdateTime_label
             // 
@@ -195,7 +203,7 @@ namespace SWUpdater
             // 
             // ExpLocal_button
             // 
-            this.ExpLocal_button.Location = new System.Drawing.Point(6, 428);
+            this.ExpLocal_button.Location = new System.Drawing.Point(163, 394);
             this.ExpLocal_button.Name = "ExpLocal_button";
             this.ExpLocal_button.Size = new System.Drawing.Size(127, 28);
             this.ExpLocal_button.TabIndex = 3;
@@ -213,7 +221,7 @@ namespace SWUpdater
             // 
             // UpdateAll_button
             // 
-            this.UpdateAll_button.Location = new System.Drawing.Point(163, 360);
+            this.UpdateAll_button.Location = new System.Drawing.Point(1048, 446);
             this.UpdateAll_button.Name = "UpdateAll_button";
             this.UpdateAll_button.Size = new System.Drawing.Size(127, 28);
             this.UpdateAll_button.TabIndex = 1;
@@ -229,15 +237,6 @@ namespace SWUpdater
             this.UpdateC_button.Text = "更新当前程序";
             this.UpdateC_button.UseVisualStyleBackColor = true;
             // 
-            // InstallPath_label
-            // 
-            this.InstallPath_label.AutoSize = true;
-            this.InstallPath_label.Location = new System.Drawing.Point(6, 66);
-            this.InstallPath_label.Name = "InstallPath_label";
-            this.InstallPath_label.Size = new System.Drawing.Size(68, 17);
-            this.InstallPath_label.TabIndex = 9;
-            this.InstallPath_label.Text = "安装路径：";
-            // 
             // Form1
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(7F, 17F);
@@ -247,6 +246,7 @@ namespace SWUpdater
             this.Controls.Add(this.Operate_groupBox);
             this.Controls.Add(this.statusStrip1);
             this.Controls.Add(this.PdataGridView);
+            this.Controls.Add(this.UpdateAll_button);
             this.DoubleBuffered = true;
             this.FormBorderStyle = System.Windows.Forms.FormBorderStyle.FixedSingle;
             this.MaximizeBox = false;
