@@ -47,8 +47,10 @@ namespace SWUpdater
             this.VerSelect_label = new System.Windows.Forms.Label();
             this.ExpLocal_button = new System.Windows.Forms.Button();
             this.ExpRepo_button = new System.Windows.Forms.Button();
-            this.UpdateAll_button = new System.Windows.Forms.Button();
             this.UpdateC_button = new System.Windows.Forms.Button();
+            this.UpdateAll_button = new System.Windows.Forms.Button();
+            this.AddApp_button = new System.Windows.Forms.Button();
+            this.DelApp_button = new System.Windows.Forms.Button();
             ((System.ComponentModel.ISupportInitialize)(this.PdataGridView)).BeginInit();
             this.Operate_groupBox.SuspendLayout();
             this.SuspendLayout();
@@ -132,6 +134,7 @@ namespace SWUpdater
             // 
             // Operate_groupBox
             // 
+            this.Operate_groupBox.Controls.Add(this.DelApp_button);
             this.Operate_groupBox.Controls.Add(this.InstallPath_label);
             this.Operate_groupBox.Controls.Add(this.UpdateTime_label);
             this.Operate_groupBox.Controls.Add(this.LocalVer_label);
@@ -203,7 +206,7 @@ namespace SWUpdater
             // 
             // ExpLocal_button
             // 
-            this.ExpLocal_button.Location = new System.Drawing.Point(163, 394);
+            this.ExpLocal_button.Location = new System.Drawing.Point(6, 326);
             this.ExpLocal_button.Name = "ExpLocal_button";
             this.ExpLocal_button.Size = new System.Drawing.Size(127, 28);
             this.ExpLocal_button.TabIndex = 3;
@@ -219,15 +222,6 @@ namespace SWUpdater
             this.ExpRepo_button.Text = "访问Repo";
             this.ExpRepo_button.UseVisualStyleBackColor = true;
             // 
-            // UpdateAll_button
-            // 
-            this.UpdateAll_button.Location = new System.Drawing.Point(1048, 446);
-            this.UpdateAll_button.Name = "UpdateAll_button";
-            this.UpdateAll_button.Size = new System.Drawing.Size(127, 28);
-            this.UpdateAll_button.TabIndex = 1;
-            this.UpdateAll_button.Text = "更新所有程序";
-            this.UpdateAll_button.UseVisualStyleBackColor = true;
-            // 
             // UpdateC_button
             // 
             this.UpdateC_button.Location = new System.Drawing.Point(6, 360);
@@ -237,11 +231,39 @@ namespace SWUpdater
             this.UpdateC_button.Text = "更新当前程序";
             this.UpdateC_button.UseVisualStyleBackColor = true;
             // 
+            // UpdateAll_button
+            // 
+            this.UpdateAll_button.Location = new System.Drawing.Point(1205, 444);
+            this.UpdateAll_button.Name = "UpdateAll_button";
+            this.UpdateAll_button.Size = new System.Drawing.Size(127, 28);
+            this.UpdateAll_button.TabIndex = 1;
+            this.UpdateAll_button.Text = "更新所有程序";
+            this.UpdateAll_button.UseVisualStyleBackColor = true;
+            // 
+            // AddApp_button
+            // 
+            this.AddApp_button.Location = new System.Drawing.Point(1048, 446);
+            this.AddApp_button.Name = "AddApp_button";
+            this.AddApp_button.Size = new System.Drawing.Size(127, 26);
+            this.AddApp_button.TabIndex = 5;
+            this.AddApp_button.Text = "添加程序";
+            this.AddApp_button.UseVisualStyleBackColor = true;
+            // 
+            // DelApp_button
+            // 
+            this.DelApp_button.Location = new System.Drawing.Point(163, 360);
+            this.DelApp_button.Name = "DelApp_button";
+            this.DelApp_button.Size = new System.Drawing.Size(127, 28);
+            this.DelApp_button.TabIndex = 10;
+            this.DelApp_button.Text = "从列表中删除";
+            this.DelApp_button.UseVisualStyleBackColor = true;
+            // 
             // Form1
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(7F, 17F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.ClientSize = new System.Drawing.Size(1350, 729);
+            this.Controls.Add(this.AddApp_button);
             this.Controls.Add(this.LogtextBox);
             this.Controls.Add(this.Operate_groupBox);
             this.Controls.Add(this.statusStrip1);
@@ -282,6 +304,8 @@ namespace SWUpdater
         private System.Windows.Forms.Label LocalVer_label;
         private System.Windows.Forms.Label AppName_label;
         private System.Windows.Forms.Label InstallPath_label;
+        private System.Windows.Forms.Button DelApp_button;
+        private System.Windows.Forms.Button AddApp_button;
     }
 }
 
