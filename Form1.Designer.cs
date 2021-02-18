@@ -39,6 +39,7 @@ namespace SWUpdater
             this.statusStrip1 = new System.Windows.Forms.StatusStrip();
             this.LogtextBox = new System.Windows.Forms.TextBox();
             this.Operate_groupBox = new System.Windows.Forms.GroupBox();
+            this.DelApp_button = new System.Windows.Forms.Button();
             this.InstallPath_label = new System.Windows.Forms.Label();
             this.UpdateTime_label = new System.Windows.Forms.Label();
             this.LocalVer_label = new System.Windows.Forms.Label();
@@ -50,7 +51,6 @@ namespace SWUpdater
             this.UpdateC_button = new System.Windows.Forms.Button();
             this.UpdateAll_button = new System.Windows.Forms.Button();
             this.AddApp_button = new System.Windows.Forms.Button();
-            this.DelApp_button = new System.Windows.Forms.Button();
             ((System.ComponentModel.ISupportInitialize)(this.PdataGridView)).BeginInit();
             this.Operate_groupBox.SuspendLayout();
             this.SuspendLayout();
@@ -151,6 +151,16 @@ namespace SWUpdater
             this.Operate_groupBox.TabStop = false;
             this.Operate_groupBox.Text = "信息";
             // 
+            // DelApp_button
+            // 
+            this.DelApp_button.Enabled = false;
+            this.DelApp_button.Location = new System.Drawing.Point(163, 360);
+            this.DelApp_button.Name = "DelApp_button";
+            this.DelApp_button.Size = new System.Drawing.Size(127, 28);
+            this.DelApp_button.TabIndex = 10;
+            this.DelApp_button.Text = "从列表中删除";
+            this.DelApp_button.UseVisualStyleBackColor = true;
+            // 
             // InstallPath_label
             // 
             this.InstallPath_label.AutoSize = true;
@@ -189,6 +199,7 @@ namespace SWUpdater
             // 
             // VerSelect_comboBox
             // 
+            this.VerSelect_comboBox.Enabled = false;
             this.VerSelect_comboBox.FormattingEnabled = true;
             this.VerSelect_comboBox.Location = new System.Drawing.Point(68, 246);
             this.VerSelect_comboBox.Name = "VerSelect_comboBox";
@@ -206,6 +217,7 @@ namespace SWUpdater
             // 
             // ExpLocal_button
             // 
+            this.ExpLocal_button.Enabled = false;
             this.ExpLocal_button.Location = new System.Drawing.Point(6, 326);
             this.ExpLocal_button.Name = "ExpLocal_button";
             this.ExpLocal_button.Size = new System.Drawing.Size(127, 28);
@@ -215,6 +227,7 @@ namespace SWUpdater
             // 
             // ExpRepo_button
             // 
+            this.ExpRepo_button.Enabled = false;
             this.ExpRepo_button.Location = new System.Drawing.Point(6, 394);
             this.ExpRepo_button.Name = "ExpRepo_button";
             this.ExpRepo_button.Size = new System.Drawing.Size(127, 28);
@@ -224,6 +237,7 @@ namespace SWUpdater
             // 
             // UpdateC_button
             // 
+            this.UpdateC_button.Enabled = false;
             this.UpdateC_button.Location = new System.Drawing.Point(6, 360);
             this.UpdateC_button.Name = "UpdateC_button";
             this.UpdateC_button.Size = new System.Drawing.Size(127, 28);
@@ -248,15 +262,6 @@ namespace SWUpdater
             this.AddApp_button.TabIndex = 5;
             this.AddApp_button.Text = "添加程序";
             this.AddApp_button.UseVisualStyleBackColor = true;
-            // 
-            // DelApp_button
-            // 
-            this.DelApp_button.Location = new System.Drawing.Point(163, 360);
-            this.DelApp_button.Name = "DelApp_button";
-            this.DelApp_button.Size = new System.Drawing.Size(127, 28);
-            this.DelApp_button.TabIndex = 10;
-            this.DelApp_button.Text = "从列表中删除";
-            this.DelApp_button.UseVisualStyleBackColor = true;
             // 
             // Form1
             // 
