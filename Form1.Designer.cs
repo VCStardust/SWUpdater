@@ -35,7 +35,6 @@ namespace SWUpdater
             this.RVerColumn = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.LPathColumn = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.URLColumn = new System.Windows.Forms.DataGridViewTextBoxColumn();
-            this.OtherColumn = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.statusStrip1 = new System.Windows.Forms.StatusStrip();
             this.LogtextBox = new System.Windows.Forms.TextBox();
             this.Operate_groupBox = new System.Windows.Forms.GroupBox();
@@ -59,6 +58,7 @@ namespace SWUpdater
             // 
             // PdataGridView
             // 
+            this.PdataGridView.AllowUserToAddRows = false;
             this.PdataGridView.AllowUserToResizeRows = false;
             this.PdataGridView.BackgroundColor = System.Drawing.SystemColors.Window;
             this.PdataGridView.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize;
@@ -67,8 +67,7 @@ namespace SWUpdater
             this.LVerColumn,
             this.RVerColumn,
             this.LPathColumn,
-            this.URLColumn,
-            this.OtherColumn});
+            this.URLColumn});
             this.PdataGridView.Location = new System.Drawing.Point(12, 12);
             this.PdataGridView.MultiSelect = false;
             this.PdataGridView.Name = "PdataGridView";
@@ -101,7 +100,7 @@ namespace SWUpdater
             // 
             this.LPathColumn.HeaderText = "路径";
             this.LPathColumn.Name = "LPathColumn";
-            this.LPathColumn.Width = 225;
+            this.LPathColumn.Width = 382;
             // 
             // URLColumn
             // 
@@ -109,13 +108,6 @@ namespace SWUpdater
             this.URLColumn.HeaderText = "Repo地址";
             this.URLColumn.Name = "URLColumn";
             this.URLColumn.Width = 225;
-            // 
-            // OtherColumn
-            // 
-            this.OtherColumn.AutoSizeMode = System.Windows.Forms.DataGridViewAutoSizeColumnMode.None;
-            this.OtherColumn.HeaderText = "其他属性";
-            this.OtherColumn.Name = "OtherColumn";
-            this.OtherColumn.Width = 157;
             // 
             // statusStrip1
             // 
@@ -323,12 +315,6 @@ namespace SWUpdater
         private System.Windows.Forms.Button UpdateC_button;
         private System.Windows.Forms.Button ExpLocal_button;
         private System.Windows.Forms.Button ExpRepo_button;
-        private System.Windows.Forms.DataGridViewTextBoxColumn NameColumn;
-        private System.Windows.Forms.DataGridViewTextBoxColumn LVerColumn;
-        private System.Windows.Forms.DataGridViewTextBoxColumn RVerColumn;
-        private System.Windows.Forms.DataGridViewTextBoxColumn LPathColumn;
-        private System.Windows.Forms.DataGridViewTextBoxColumn URLColumn;
-        private System.Windows.Forms.DataGridViewTextBoxColumn OtherColumn;
         private System.Windows.Forms.ComboBox VerSelect_comboBox;
         private System.Windows.Forms.Label VerSelect_label;
         private System.Windows.Forms.Label UpdateTime_label;
@@ -339,6 +325,11 @@ namespace SWUpdater
         private System.Windows.Forms.Button AddApp_button;
         private System.Windows.Forms.ComboBox UpdMethod_comboBox;
         private System.Windows.Forms.Label UpdMethod_label;
+        private System.Windows.Forms.DataGridViewTextBoxColumn NameColumn;
+        private System.Windows.Forms.DataGridViewTextBoxColumn LVerColumn;
+        private System.Windows.Forms.DataGridViewTextBoxColumn RVerColumn;
+        private System.Windows.Forms.DataGridViewTextBoxColumn LPathColumn;
+        private System.Windows.Forms.DataGridViewTextBoxColumn URLColumn;
     }
 }
 
