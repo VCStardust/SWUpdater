@@ -280,6 +280,7 @@ namespace SWUpdater
             this.AddApp_button.TabIndex = 5;
             this.AddApp_button.Text = "添加程序";
             this.AddApp_button.UseVisualStyleBackColor = true;
+            this.AddApp_button.Click += new System.EventHandler(this.AddApp_button_Click);
             // 
             // Form1
             // 

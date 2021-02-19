@@ -16,5 +16,7 @@ namespace SWUpdater
         {
             InitializeComponent();
         }
+
+        private void AddApp_button_Click(object sender, EventArgs e) => PdataGridView.RowCount++;
     }
 }
