@@ -39,6 +39,8 @@ namespace SWUpdater
             this.statusStrip1 = new System.Windows.Forms.StatusStrip();
             this.LogtextBox = new System.Windows.Forms.TextBox();
             this.Operate_groupBox = new System.Windows.Forms.GroupBox();
+            this.UpdMethod_comboBox = new System.Windows.Forms.ComboBox();
+            this.UpdMethod_label = new System.Windows.Forms.Label();
             this.DelApp_button = new System.Windows.Forms.Button();
             this.InstallPath_label = new System.Windows.Forms.Label();
             this.UpdateTime_label = new System.Windows.Forms.Label();
@@ -134,6 +136,8 @@ namespace SWUpdater
             // 
             // Operate_groupBox
             // 
+            this.Operate_groupBox.Controls.Add(this.UpdMethod_comboBox);
+            this.Operate_groupBox.Controls.Add(this.UpdMethod_label);
             this.Operate_groupBox.Controls.Add(this.DelApp_button);
             this.Operate_groupBox.Controls.Add(this.InstallPath_label);
             this.Operate_groupBox.Controls.Add(this.UpdateTime_label);
@@ -150,6 +154,28 @@ namespace SWUpdater
             this.Operate_groupBox.TabIndex = 3;
             this.Operate_groupBox.TabStop = false;
             this.Operate_groupBox.Text = "信息";
+            // 
+            // UpdMethod_comboBox
+            // 
+            this.UpdMethod_comboBox.Enabled = false;
+            this.UpdMethod_comboBox.FormattingEnabled = true;
+            this.UpdMethod_comboBox.Items.AddRange(new object[] {
+            "覆盖并追加",
+            "删除重建(完全)",
+            "仅保留数据"});
+            this.UpdMethod_comboBox.Location = new System.Drawing.Point(80, 213);
+            this.UpdMethod_comboBox.Name = "UpdMethod_comboBox";
+            this.UpdMethod_comboBox.Size = new System.Drawing.Size(121, 25);
+            this.UpdMethod_comboBox.TabIndex = 12;
+            // 
+            // UpdMethod_label
+            // 
+            this.UpdMethod_label.AutoSize = true;
+            this.UpdMethod_label.Location = new System.Drawing.Point(6, 216);
+            this.UpdMethod_label.Name = "UpdMethod_label";
+            this.UpdMethod_label.Size = new System.Drawing.Size(68, 17);
+            this.UpdMethod_label.TabIndex = 11;
+            this.UpdMethod_label.Text = "更新方式：";
             // 
             // DelApp_button
             // 
@@ -201,7 +227,7 @@ namespace SWUpdater
             // 
             this.VerSelect_comboBox.Enabled = false;
             this.VerSelect_comboBox.FormattingEnabled = true;
-            this.VerSelect_comboBox.Location = new System.Drawing.Point(68, 246);
+            this.VerSelect_comboBox.Location = new System.Drawing.Point(80, 182);
             this.VerSelect_comboBox.Name = "VerSelect_comboBox";
             this.VerSelect_comboBox.Size = new System.Drawing.Size(121, 25);
             this.VerSelect_comboBox.TabIndex = 5;
@@ -209,7 +235,7 @@ namespace SWUpdater
             // VerSelect_label
             // 
             this.VerSelect_label.AutoSize = true;
-            this.VerSelect_label.Location = new System.Drawing.Point(6, 249);
+            this.VerSelect_label.Location = new System.Drawing.Point(18, 185);
             this.VerSelect_label.Name = "VerSelect_label";
             this.VerSelect_label.Size = new System.Drawing.Size(56, 17);
             this.VerSelect_label.TabIndex = 4;
@@ -311,6 +337,8 @@ namespace SWUpdater
         private System.Windows.Forms.Label InstallPath_label;
         private System.Windows.Forms.Button DelApp_button;
         private System.Windows.Forms.Button AddApp_button;
+        private System.Windows.Forms.ComboBox UpdMethod_comboBox;
+        private System.Windows.Forms.Label UpdMethod_label;
     }
 }
 
